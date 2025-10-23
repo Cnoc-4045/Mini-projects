@@ -1,5 +1,7 @@
 #Encryption
 
+previousPassword=str(input("Do you have a password to encrypt? (y/n): "))
+
 def caesarCypher(text, shift):
         encrypted = ""
 
@@ -15,7 +17,7 @@ def caesarCypher(text, shift):
 
         return encrypted
 
-if input("Do you already have a password to encrypt? (y/n): ")=="y":
+if previousPassword=="y":
     password=str(input("Enter the password to encrypt: "))
 
     shift=int(input("Enter the shift number for Ceaser Cypher: "))
