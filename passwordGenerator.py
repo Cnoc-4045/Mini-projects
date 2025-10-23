@@ -2,7 +2,7 @@
 
 import encryption
 import random
-if(encryption.previousPassword=="n"):
+if(encryption.previousPassword.lower()=="n"):
     alphabetUpper=[""]*26
     alphabet=[""]*26
     number=[""]*10
