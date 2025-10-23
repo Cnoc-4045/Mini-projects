@@ -1,6 +1,7 @@
 #Password Generator
+
+import encryption
 import random
-import math
 
 alphabetUpper=[""]*26
 alphabet=[""]*26
@@ -37,3 +38,8 @@ def generate_password(combined,length):
 password=generate_password(combined,length)
 
 print(f"Generated Password: {password}")
+
+if input("Do you want to encrypt the password? (y/n): ")=="y":
+    shift=int(input("Enter the shift number for Ceaser Cypher: "))
+    encryptionPassword=encryption.caesarCypher(password,shift)
+    print(f"Encrypted Password: {encryptionPassword}")
