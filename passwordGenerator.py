@@ -1,5 +1,6 @@
 #Password Generator
 
+import randomEncryption
 import encryption
 import random
 if(encryption.previousPassword.lower()=="n"):
@@ -43,3 +44,7 @@ if(encryption.previousPassword.lower()=="n"):
         shift=int(input("Enter the shift number for Ceaser Cypher: "))
         encryptionPassword=encryption.caesarCypher(password,shift)
         print(f"Encrypted Password: {encryptionPassword}")
+    if input("Do you want to encrypt the password using Random Encryption? (y/n): ")=="y":
+        mapping = randomEncryption.generateRandomMapping()
+        encryptionRandomPassword=randomEncryption.encrypt(password, mapping)
+        print(f"Encrypted Password using Random Encryption: {encryptionPassword}")  
